@@ -1,0 +1,9 @@
+<!-- index.wxml -->
+<view class="container">
+  <image
+    mode="widthFix"
+    src="../../static/ikon/007.png"
+    style="width:{{size}}rpx;height:{{size}}rpx"
+  />
+  <view>{{title}}</view>
+</view>

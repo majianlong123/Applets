@@ -1,0 +1,33 @@
+<!-- pages/detailapply/detailapply.wxml -->
+<view class="box">
+  <view class="avatar">
+    <!-- <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead"> -->
+    <image src="{{user_img}}" style="border-radius: 50%"></image>
+    <!-- </van-uploader> -->
+  </view>
+  <view class="field-container">
+    <view class="field-item">
+      <text class="field-label">用户昵称</text>
+      <view class="field-right" bind:tap="editName">
+        <text>{{dataList.nickname||'点击修改'}}</text>
+        <van-icon name="arrow" class="icon" />
+      </view>
+    </view>
+    <view class="field-item">
+      <text class="field-label">手机号码</text>
+      <button class="field-button" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        <text>{{phone}}</text>
+        <!-- <text>{{dataList.phone}}</text> -->
+        <van-icon name="arrow" class="icon" />
+      </button>
+    </view>
+  </view>
+</view>
+<van-popup show="{{ showName }}" bind:close="onClose">
+  <view class="form-name">
+    <input class="field-val" placeholder="填写您的用户昵称" value="{{dataList.nickname}}" data-name='dataList.nickname' bind:input="onInput" pulicSetData="setinputval" />
+    <van-button class="button" color='#4e51de' bindtap="handapply" round>确认修改</van-button>
+  </view>
+</van-popup>
+<!-- <view class="footer">
+</view> -->

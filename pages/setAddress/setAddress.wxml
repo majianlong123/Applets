@@ -1,0 +1,28 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="table">
+    <view class="input">
+      <span>联系人</span>
+      <input value="{{linkman}}" bind:input="setInputVal" data-name="linkman" placeholder="填写您的姓名" />
+    </view>
+    <view class="input">
+      <span>联系电话</span>
+      <input value="{{contact}}" bind:input="setInputVal" data-name="contact" placeholder="填写您的手机号码" type="number" />
+    </view>
+    <view class="input">
+      <span>上门地址</span>
+      <button class="gpsbtn" open-type='openSetting' bindtap="getLocation" bindopensetting='openSetting' wx:if="{{!isGps}}">
+        请先打开GPS
+      </button>
+      <input value="{{address}}" placeholder="点击选择上门地址" disabled="{{true}}" wx:else />
+      <image src="../../static/img/order/map.png" style="width: 45rpx;height: 45rpx;"></image>
+    </view>
+    <view class="input">
+      <span>详细地址</span>
+      <input value="{{address_detail}}" bind:input="setInputVal" data-name="address_detail" placeholder="详细地址（如小区、门牌号）" />
+    </view>
+  </view>
+  <view class="footer">
+    <van-button class="button" color='#4e51de' bindtap="storage" round>保存</van-button>
+  </view>
+</view>

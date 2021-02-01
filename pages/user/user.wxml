@@ -1,0 +1,49 @@
+<van-sticky style="width:100%">
+  <view class="top">
+    <view class="title">联系我们</view>
+  </view>
+</van-sticky>
+<view class="map">
+  <map id="map" 
+    longitude="{{longitude}}" 
+    latitude="{{latitude}}" 
+    scale="14" 
+    markers="{{markers}}" 
+    bindregionchange="regionchange" 
+    show-location
+    style="width: 100%; height: 300px;">
+	</map>
+</view>
+<view class="contact_details">
+  <view style="display:flex;padding: 20rpx 20rpx;">
+    <view style="flex: 1;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+      <image src="../../static/home/name.png" class="icon"></image>
+      <view>{{ContactPerson}}</view>
+    </view>
+    <view style="flex: 2;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+      <image src="../../static/home/phone.png" class="icon"></image>
+      <view bindtap="Call" data-phone="{{phone}}">{{phone}}</view>
+    </view>
+  </view>
+  <view style="display:flex;padding: 20rpx 20rpx;">
+    <view style="flex: 1;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+      <image src="../../static/home/name.png" class="icon"></image>
+      <view>{{ContactPerson_two}}</view>
+    </view>
+    <view style="flex: 2;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+      <image src="../../static/home/phone.png" class="icon"></image>
+      <view bindtap="Call" data-phone="{{phone_two}}">{{phone_two}}</view>
+    </view>
+  </view>
+  <view style="padding: 20rpx 20rpx;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+    <image src="../../static/home/address.png" class="AddressIcon" style="width:50rpx"></image>
+    <view>{{address}}</view>
+  </view>
+  <view style="padding: 20rpx 20rpx;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+    <image src="../../static/home/address.png" class="AddressIcon"></image>
+    <view>{{address_two}}</view>
+  </view>
+</view>
+<view class="Code">
+  <image src="../../static/img/QRcode.png" class="Codeimg"></image>
+</view>

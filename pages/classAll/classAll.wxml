@@ -1,0 +1,17 @@
+<van-sticky style="width:100%">
+  <view class="top">
+    <view class="title">学校介绍</view>
+  </view>
+</van-sticky>
+<view class="protokolle">
+
+  <view>
+    <!-- <view class="TopImg">
+      <image src="{{top_img}}"></image>
+    </view> -->
+    <view class="jianjie">
+      <rich-text nodes="{{content}}"></rich-text>
+    </view>
+  </view>
+
+</view>

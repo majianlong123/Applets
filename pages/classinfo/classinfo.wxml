@@ -1,0 +1,20 @@
+<view class="nav">
+  <view class="back">
+    <view class="left">
+      <image src="../../static/img/back.png" bindtap="back"></image>
+    </view>
+    <view class="right">
+      <view class="p">{{title}}</view>
+    </view>
+  </view>
+</view>
+
+<view>
+ <!-- <view class="Title">{{title}}</view> -->
+ <!-- <view class="pic">
+   <image src="{{pic}}"></image>
+ </view> -->
+ <view class="Content">
+  <rich-text nodes="{{content}}"></rich-text>
+ </view>
+</view>

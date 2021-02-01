@@ -1,0 +1,13 @@
+<van-sticky style="width:100%">
+  <view class="top">
+    <view class="title">课程介绍</view>
+  </view>
+</van-sticky>
+<view style="padding-bottom: 20rpx;margin: 0rpx 20rpx;text-align: center;">
+  <view class="card" wx:for="{{couseinfo}}" wx:key='key' bindtap="goClassInfo" data-id="{{item.id}}">
+    <!-- <view class="Text"> -->
+      <image src="{{item.picurl_str}}" mode="widthFix" style="width: 65%;"></image>
+      <!-- <image src="https://s3.ax1x.com/2020/12/26/rfWNCQ.png"></image> -->
+    <!-- </view> -->
+  </view>
+</view>

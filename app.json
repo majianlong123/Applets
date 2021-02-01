@@ -1,0 +1,110 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/searchResults/searchResults",
+    "pages/user/user",
+    "pages/order/order",
+    "pages/article/article",
+    "pages/imgList/imgList",
+    "pages/editUser/editUser",
+    "pages/articleDetail/articleDetail",
+    "pages/classAll/classAll",
+    "pages/address/address",
+    "pages/setAddress/setAddress",
+    "pages/find/find",
+    "pages/reservation/reservation",
+    "pages/features/features",
+    "pages/bill/bill",
+    "pages/protocol/protocol",
+    "pages/classinfo/classinfo",
+    "pages/bindUser/bindUser"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置定位展示所在提货点"
+    }
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/bottom/home1.png",
+        "selectedIconPath": "static/bottom/home.png"
+      },
+      {
+        "pagePath": "pages/classAll/classAll",
+        "text": "学校介绍",
+        "iconPath": "static/bottom/school1.png",
+        "selectedIconPath": "static/bottom/school.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "课程介绍",
+        "iconPath": "static/bottom/kecheng1.png",
+        "selectedIconPath": "static/bottom/kecheng.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "联系我们",
+        "iconPath": "static/bottom/my1.png",
+        "selectedIconPath": "static/bottom/my.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button",
+    "van-icon": "@vant/weapp/icon",
+    "van-popup": "@vant/weapp/popup",
+    "van-checkbox": "@vant/weapp/checkbox",
+    "van-checkbox-group": "@vant/weapp/checkbox-group",
+    "van-datetime-picker": "@vant/weapp/datetime-picker",
+    "van-picker": "@vant/weapp/picker",
+    "van-radio": "@vant/weapp/radio",
+    "van-radio-group": "@vant/weapp/radio-group",
+    "van-search": "@vant/weapp/search",
+    "van-dialog": "@vant/weapp/dialog",
+    "van-loading": "@vant/weapp/loading",
+    "van-tab": "@vant/weapp/tab",
+    "van-tabs": "@vant/weapp/tabs",
+    "van-area": "@vant/weapp/area",
+    "van-collapse": "@vant/weapp/collapse",
+    "van-collapse-item": "@vant/weapp/collapse-item",
+    "van-rate": "@vant/weapp/rate",
+    "van-stepper": "@vant/weapp/stepper",
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu",
+    "van-dropdown-item": "@vant/weapp/dropdown-item",
+    "van-count-down": "@vant/weapp/count-down",
+    "van-goods-action": "@vant/weapp/goods-action",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon",
+    "van-goods-action-button": "@vant/weapp/goods-action-button",
+    "van-field": "@vant/weapp/field",
+    "van-tag": "@vant/weapp/tag",
+    "van-image": "@vant/weapp/image",
+    "van-tree-select": "@vant/weapp/tree-select",
+    "van-row": "@vant/weapp/row",
+    "van-col": "@vant/weapp/col",
+    "van-card": "@vant/weapp/card",
+    "van-empty": "@vant/weapp/empty",
+    "van-steps": "@vant/weapp/steps",
+    "van-uploader": "@vant/weapp/uploader",
+    "van-sidebar": "@vant/weapp/sidebar",
+    "van-sidebar-item": "@vant/weapp/sidebar-item",
+    "van-sticky": "@vant/weapp/sticky",
+    "van-toast": "@vant/weapp/toast",
+    "van-notify": "@vant/weapp/notify"
+  }
+}

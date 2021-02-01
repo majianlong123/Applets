@@ -1,0 +1,141 @@
+.container {
+  min-height: 100vh;
+  background: #fafafa;
+}
+.service-field {
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+}
+.service-field .field-button {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.service-field .field-content {
+  margin-left: 20rpx;
+}
+.field-container {
+  margin-top: 20rpx;
+  padding: 5rpx 25rpx;
+  background: white;
+}
+
+.field-container .field-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 25rpx;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+}
+.gpsbtn {
+  height: auto;
+  line-height: normal;
+  font-size: 28rpx;
+  margin: 0;
+  margin-left: 40rpx;
+  background: white;
+  width: calc(100% - 210rpx);
+  text-align: left;
+  padding: 0;
+}
+.gpsbtn::after {
+  border: 0;
+}
+.field-container .field-item:last-child {
+  border: 0;
+}
+.field-container .field-item .field-label {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.field-container .field-item .field-val {
+  flex: 1;
+  font-size: 28rpx;
+  margin-left: 40rpx;
+}
+
+.field-container .field-item .field-item-right {
+  margin-left: auto;
+}
+
+.field-container .field-item .emphasis::before {
+  content: '*';
+  position: absolute;
+  left: 0;
+  color: #ff404a;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22rpx;
+}
+.uploader-container {
+  margin-top: 20rpx;
+  padding: 40rpx 50rpx;
+  background: white;
+}
+.uploader-container .uploader-title {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.floor-height {
+  height: 120rpx;
+}
+.floor {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* height: 120rpx; */
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
+.floor > view {
+  flex: 1;
+}
+.floor .floor-margin {
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.floor .floor-margin .floor-price {
+  font-size: 36rpx;
+  color: #d45250;
+}
+.floor .floor-margin .floor-price::first-letter {
+  letter-spacing: 10rpx;
+  font-size: 22rpx;
+}
+.floor .floor-margin .floor-label {
+  margin-left: 20rpx;
+  font-size: 20rpx;
+  border: 1px solid #ff404a;
+  color: #ff404a;
+  padding: 2rpx 10rpx;
+}
+.floor .floor-button {
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #ff404a;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  text-align: center;
+}
+.select-address {
+  padding: 25rpx;
+  font-size: 28rpx;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+.select-icon {
+  margin-left: 20rpx;
+}

@@ -1,0 +1,19 @@
+.two-ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.first-small::first-letter {
+  font-size: 24rpx;
+}
+.van-button--large {
+  width: 100%;
+}

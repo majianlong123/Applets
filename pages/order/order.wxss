@@ -1,0 +1,38 @@
+.top {
+	height: 180rpx;
+  background-color: #9abcff;
+}
+.title {
+	padding-top: 105rpx;
+	padding-left: 50rpx;
+  font-size: 36rpx;
+  color: #fff;
+}
+.carditem {
+	width: 690rpx;
+  margin: 10rpx auto;
+  padding-bottom: 15rpx;
+  position: relative;
+}
+.bgc {
+  width: 100%;
+  height: 150rpx;
+  margin: 0rpx auto;
+}
+.Font {
+  white-space: pre-wrap;
+  padding: 25rpx 40rpx;
+  font-size: 25rpx;
+  color: #666666;
+  position: absolute;
+  top: 8rpx;
+  left: 20rpx;
+}
+.card {
+  border-radius: 10rpx;
+  margin: 10rpx 0rpx;
+}
+/* .keImg {
+  width: 100%;
+  height: 175px;
+} */

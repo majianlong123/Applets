@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="tablist">
+    <van-search class="search" use-action-slot value="{{value}}" shape="round" bind:change="onChange" show-action bind:clear="onClear" placeholder="请输入搜索关键词">
+      <view slot="action" bind:tap="onSearch">搜索</view>
+    </van-search>
+  </view>
+  <view class="block" wx:if="{{orderList.length!=0}}">
+    <view class="block_item" wx:for="{{orderList}}" wx:key="*this" bind:tap="open" data-id="{{item.product_id}}">
+      <image mode="aspectFill" src="{{item.picurl}}" />
+      <view class="content">
+        <view class="content_title two-ellipsis">{{item.name}}</view>
+        <view class="content_money">
+          <view class="content_money-red">￥{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="margin-top: 240rpx;" wx:else>
+    <no-list title="你搜索的商品还没有上架看看其他的吧" />
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "disableScroll": false,
+  "usingComponents": {
+    "van-toast": "/miniprogram_npm/@vant/weapp/toast"
+  }
+}

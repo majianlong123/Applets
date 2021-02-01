@@ -1,0 +1,18 @@
+<van-sticky style="width:100%">
+  <view class="nav">
+    <view class="back">
+      <view class="left">
+        <image src="../../static/img/back.png" bindtap="back"></image>
+      </view>
+      <view class="right">
+        <view class="p">活动掠影</view>
+      </view>
+    </view>
+  </view>
+</van-sticky>
+
+<view class="box">
+  <block wx:for="{{datalist}}" wx:key="key">
+    <image src="{{item.picurl_str}}" class="img" bindtap='previewImage' data-src="{{item.picurl_str}}" mode="widthFix"></image>
+  </block>
+</view>

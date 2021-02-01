@@ -1,0 +1,178 @@
+<!-- index.wxml -->
+<!-- <scroll-view class="container" scroll-y='true'  scroll-with-animation="true"> -->
+<view>
+  <image src="../../static/oval.png" class="top_img"></image>
+  <view class="Top_Title" style="padding-top:{{height}}px;">
+    <view style="padding-left: 23rpx;">
+      <image src="../../static/logo.png" class="Logo"></image>
+    </view>
+    <view style="padding: 0rpx 180rpx;line-height: 70rpx;">爱学全优</view>
+  </view>
+
+  <!-- <view style="height: 50rpx"></view> -->
+  <view class="bottom-wrapper">
+    <view class="lunbo" wx:if="{{info!=''}}">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px"
+        next-margin="{{nextMargin}}px">
+        <block wx:for="{{info}}" wx:key="*this">
+          <swiper-item bindtap="tofenLei" data-id="{{item.product_id}}">
+            <image src="{{item.picurl_str}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="Introduction">
+    
+    </view>
+    <!-- 分类 -->
+    <view class="nav-bar-wrap">
+      <block wx:for="{{cateinfo}}" wx:key='key'>
+        <view class="nav-bar-item" bindtap="goClassAll" data-id='{{item.id}}'>
+          <image src="{{item.picurl}}" />
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+
+    <view class="school_introduction">
+      <view class="top_title">
+        <view class="blue"></view>
+        <view class="title">学校介绍</view>
+      </view>
+      <view bindtap="toClassAll" style="position: relative;">
+        <image src="{{jieshaoImg}}" class="left_img"></image>
+        <view style="width:58px; height:46px;float: right;margin-right: 71rpx;"></view>
+        <view class="content">
+          <view>{{school_introduction}}<text style="color: #4f86f7;padding-left: 50rpx;font-size: 14px;" bindtap="toClassAll">查看更多</text></view>
+        </view>
+        <image src="../../static/home/rightimg.png" class="right_img"></image>
+      </view>
+    </view>
+
+    <view class="course">
+      <view class="top_title">
+        <view class="blue"></view>
+        <view class="title">开设课程</view>
+        <view class="more" bindtap="goOrder">查看更多></view>
+      </view>
+      <view style="padding-bottom: 20rpx;margin: 0rpx 20rpx;display:flex">
+        <view class="card" wx:for="{{couseinfo}}" wx:key='key' bindtap="goClassInfo" data-id="{{item.id}}">
+          <view class="Text">
+            <image src="{{item.picurl_str}}" class="keImg"></image>
+            <!-- <image src="https://s3.ax1x.com/2020/12/26/rfWNCQ.png"></image> -->
+          </view>
+        </view>
+        <!-- <view class="card">
+          <view class="Text">北欧英语</view>
+        </view> -->
+        <!-- <view class="card">
+          <view class="Text">硬笔书法</view>
+        </view> -->
+      </view>
+    </view>
+
+    <view class="Features" id="tese">
+      <view class="top_title">
+        <view class="blue"></view>
+        <view class="title">教学特色</view>
+        <view class="more" bindtap="goList">查看更多></view>
+      </view>
+      <view style="padding-bottom: 25rpx;">
+        <view class="carditem" wx:for="{{education}}" wx:key='key'>
+          <image src="https://s3.ax1x.com/2020/12/24/rgJJi9.png" class="bgc"></image>
+          <view class="Font">{{item.content_str}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="activity" id="Glimpse">
+      <view class="top_title">
+        <view class="blue"></view>
+        <view class="title">活动掠影</view>
+        <view class="more" bindtap="goimgList">查看更多></view>
+      </view>
+      <view>
+        <view style="padding: 0rpx 25rpx;display: flex;">
+          <view class="Left_Img">
+            <image src="{{leftImg}}" class="img" bindtap='previewImage' data-src="{{leftImg}}"></image>
+          </view>
+          <view>
+            <view class="Top_Img">
+              <image src="{{topImg}}" class="img" bindtap='previewImage' data-src="{{topImg}}"></image>
+            </view>
+            <view class="Bottom_Img">
+              <image src="{{bottomImg}}" class="img" bindtap='previewImage' data-src="{{bottomImg}}"></image>
+            </view>
+          </view>
+          <view></view>
+        </view>
+      </view>
+    </view>
+
+    <view class="contact_us">
+      <view class="top_title">
+        <view class="blue"></view>
+        <view class="title">联系我们</view>
+      </view>
+      <view style="padding-bottom: 20rpx;" >
+        <view class="contact_details">
+          <view style="display:flex;padding: 20rpx 20rpx;">
+            <view style="flex: 1;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+              <image src="../../static/home/name.png" class="icon"></image>
+              <view>{{ContactPerson}}</view>
+            </view>
+            <view style="flex: 2;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+              <image src="../../static/home/phone.png" class="icon"></image>
+              <view bindtap="Call" data-phone="{{phone}}">{{phone}}</view>
+            </view>
+          </view>
+          <view style="display:flex;padding: 20rpx 20rpx;">
+            <view style="flex: 1;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+              <image src="../../static/home/name.png" class="icon"></image>
+              <view>{{ContactPerson_two}}</view>
+            </view>
+            <view style="flex: 2;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+              <image src="../../static/home/phone.png" class="icon"></image>
+              <view bindtap="Call" data-phone="{{phone_two}}">{{phone_two}}</view>
+            </view>
+          </view>
+          <view style="padding: 20rpx 20rpx;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+            <image src="../../static/home/address.png" class="AddressIcon" style="width:50rpx"></image>
+            <view>{{address}}</view>
+          </view>
+          <view style="padding: 20rpx 20rpx;font-size: 25rpx;color: #666;display: flex;font-size: 16px;">
+            <image src="../../static/home/address.png" class="AddressIcon"></image>
+            <view>{{address_two}}</view>
+          </view>
+        </view>
+        
+        <view class="contact_details">
+          <view class="top_title">
+            <view class="title">试听课报名</view>
+          </view>
+          <view class="form_name">姓名</view>
+          <view class="form_input">
+            <input placeholder="请输入姓名" value="{{linkman}}" bindinput="getName"/>
+          </view>
+          <view class="form_name">手机号</view>
+          <view class="form_input">
+            <input placeholder="请输入手机号" value="{{contact}}" bindinput="getPhone"/>
+          </view>
+          <view class="form_button">
+            <button type="primary" style="background-color: #9abcff;" bindtap="toForm">报名</button>
+          </view>
+          <van-toast id="van-toast" />
+        </view>
+      </view>
+    </view>
+    <van-toast id="van-toast" />
+  </view>
+    <view style="position: fixed;top: 80%;right: 0rpx;">
+      <button open-type="contact" style="background: 0;" class="btn">
+        <view style="line-height: 45rpx;">
+          <image src="../../static/contact_us.png" style="width: 80rpx;height: 80rpx;"></image>
+        </view>
+      </button>
+    </view>
+</view>

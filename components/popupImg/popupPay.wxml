@@ -1,0 +1,18 @@
+<view
+  wx:for="{{ lists }}"
+  wx:key="index"
+  class="van-uploader__preview"
+  data-index="{{ index }}"
+  bindtap="onClickPreview"
+>
+  <image
+    wx:if="{{ item.isImage }}"
+    mode="{{ imageFit }}"
+    src="{{ item.url || item.path }}"
+    alt="{{ item.name || ('图片' + index) }}"
+    class="van-uploader__preview-image"
+    style="width: {{ utils.addUnit(previewSize) }}; height: {{ utils.addUnit(previewSize) }};"
+    data-index="{{ index }}"
+    bind:tap="onPreviewImage"
+  />
+</view>

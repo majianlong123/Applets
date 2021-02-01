@@ -1,0 +1,82 @@
+.avatar {
+  text-align: center;
+}
+.avatar image {
+  width: 150rpx;
+  height: 150rpx;
+}
+.field-container {
+  margin-top: 20rpx;
+  padding: 5rpx 25rpx;
+  background: white;
+}
+
+.field-container .field-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 25rpx;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+}
+/* .field-container .field-item:last-child {
+  border: 0;
+} */
+.field-container .field-item .field-label {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.field-container .field-item .field-val {
+  flex: 1;
+  font-size: 24rpx;
+  margin-left: 40rpx;
+  text-align: right;
+}
+.field-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.field-button {
+  flex: 1;
+  background: none;
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  font-size: 28rpx;
+  /* color: #666; */
+}
+.field-button::after {
+  border: 0;
+}
+.field-button .icon,
+.field-right .icon {
+  margin-left: 20rpx;
+}
+.form-name {
+  padding: 50rpx 40rpx;
+  width: 80vw;
+  text-align: center;
+}
+.form-name input {
+  border: 1rpx solid #eee;
+  border-radius: 20rpx;
+  padding: 20rpx 30rpx;
+  width: calc(80% - 60rpx);
+  margin: 0 auto;
+  /* box-sizing: border-box; */
+  text-align: left;
+}
+.footer {
+  position: fixed;
+  bottom: 40rpx;
+  padding: 0 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.form-name .van-button {
+  margin-top: 50rpx;
+  width: 90%;
+}

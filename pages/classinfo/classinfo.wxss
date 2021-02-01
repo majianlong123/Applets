@@ -1,0 +1,40 @@
+.nav {
+  height: 180rpx;
+  background-color: #9abcff;
+}
+.nav .back image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 105rpx;
+  margin-left: 20rpx;
+}
+.nav .left {
+  float: left;  
+}
+.nav .right {
+  float: left;
+  padding-top: 98rpx;
+}
+.nav .p {
+  color: #fff;
+  text-align: center;
+  font-size: 36rpx;
+  width: 250rpx;
+}
+.Title {
+  text-align: center;
+  padding: 20rpx 0rpx;
+  font-size: 35rpx;
+  font-family: 900;
+}
+.pic {
+  margin: 10rpx 40rpx;
+  text-align: center;
+}
+.Content {
+  margin: 10rpx 40rpx;
+  line-height: 50rpx;
+}
+.Content image {
+  width: 100%;
+}

@@ -1,0 +1,32 @@
+<!-- index.wxml -->
+<view class="container">
+  <van-radio-group class="group" value="{{radio}}" bind:change="radioChange" wx:if="{{adrList.length!=0}}">
+    <view class="table" wx:for="{{adrList}}" wx:key="*this">
+      <view class="infeed" bind:tap="selAdr" data-item="{{item}}">
+        <view>{{item.linkman}}</view>
+        <view>{{item.contact}}</view>
+      </view>
+      <view class="address" bind:tap="selAdr" data-item="{{item}}">
+        {{item.address}}
+        <span>{{item.address_detail}}</span>
+      </view>
+      <view class="floor">
+        <!-- <view class="choice">
+          <van-radio name="{{item.id}}" checked-color="#4e51de" />
+          <text>默认选择</text>
+        </view> -->
+        <view class="icon">
+          <van-icon name="edit" size="1.2rem" color="#4e51de" catch:click="onEdit" data-item="{{item}}" />
+          <van-icon name="delete" size="1.2rem" color="#4e51de" catch:click="onDel" data-id="{{item.id}}" />
+        </view>
+      </view>
+    </view>
+  </van-radio-group>
+  <view wx:else>
+    <no-list title="暂无地址" size="200"></no-list>
+  </view>
+  <view class="footer">
+    <van-button class="button" color='#4e51de' bindtap="open" round>添加地址</van-button>
+  </view>
+  <van-dialog id="van-dialog" />
+</view>

@@ -1,0 +1,19 @@
+<van-sticky style="width:100%">
+  <view class="nav">
+    <view class="back">
+      <view class="left">
+        <image src="../../static/img/back.png" bindtap="back"></image>
+      </view>
+      <view class="right">
+        <view class="p">教学特色</view>
+      </view>
+    </view>
+  </view>
+</van-sticky>
+
+<view style="padding-bottom: 25rpx;">
+  <view class="carditem" wx:for="{{education}}" wx:key='key'>
+    <image src="https://s3.ax1x.com/2020/12/24/rgJJi9.png" class="bgc"></image>
+    <view class="Font">{{item.content_str}}</view>
+  </view>
+</view>

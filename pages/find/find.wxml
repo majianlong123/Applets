@@ -1,0 +1,21 @@
+<view class="find-container">
+  <van-tabs active="{{active}}" bind:change="onChange" color='#4e51de'>
+    <van-tab wx:for="{{tabBarList}}" wx:key="index" title="{{item.label}}" name="{{item.value}}">
+
+    </van-tab>
+  </van-tabs>
+  <view wx:if="{{article.length != 0}}">
+    <view class="content" wx:for="{{article}}" wx:key="*this" bindtap="toDetail" data-id="{{item.id}}">
+      <image class="img" src="{{item.picurl}}" />
+      <view class="box_content">
+        <view class="tit two-ellipsis">{{item.title}}</view>
+        <view class="time">{{item.descript}}</view>
+        <view class="time">{{item.create_time}}</view>
+      </view>
+      <image class="icon" src="/static/component/right.png" />
+    </view>
+  </view>
+  <view wx:else style="margin-top:125rpx;">
+    <no-list  title="暂无内容" class="no-list" style="margin-top:200rpx;" size="200"></no-list>
+  </view>
+</view>

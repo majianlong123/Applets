@@ -1,0 +1,11 @@
+.footer {
+  position: absolute;
+  bottom: 60rpx;
+  width: 100%;
+  padding: 0 80rpx;
+  box-sizing: border-box;
+}
+.button {
+  width: 100%;
+  margin: 15rpx 0;
+}

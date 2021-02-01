@@ -1,0 +1,74 @@
+<view class="container">
+  <view class="service-field">
+    <view>已选</view>
+    <view class="field-content">{{cateName}}>{{serviceName}}</view>
+    <view class="field-button" bind:tap="onChangeService">
+      <text>更改</text>
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="field-container">
+    <view class="field-item">
+      <text class="field-label emphasis">联系人</text>
+      <input class="field-val" placeholder="填写您的姓名" value="{{address.linkman}}" data-name="address.linkman" bind:input="setInputVal" />
+    </view>
+    <view class="field-item">
+      <text class="field-label emphasis">联系电话</text>
+      <input class="field-val" type="number" placeholder="填写您的手机号码" value="{{address.contact}}" data-name="address.contact" bind:input="setInputVal" />
+    </view>
+    <view class="field-item">
+      <text class="field-label emphasis">上门地址</text>
+      <button class="gpsbtn" open-type='openSetting' bindtap="getLocation" bindopensetting='openSetting' wx:if="{{!isGps}}">
+        请先打开GPS
+      </button>
+      <input class="field-val" placeholder="点击选择上门地址" value="{{address.address}}" bind:tap="isMap" disabled="{{true}}" wx:else />
+      <view>
+        <image src="../../static/img/order/map.png" style="width: 45rpx;height: 45rpx;" bind:tap="isMap"></image>
+      </view>
+    </view>
+    <view class="field-item">
+      <text class="field-label emphasis">详细地址</text>
+      <input class="field-val" placeholder="详细地址（如小区、门牌号）" value="{{address.address_detail}}" data-name="address.address_detail" bind:input="setInputVal" />
+    </view>
+    <view class="select-address" bind:tap="openAddress">
+      <text>选择其他地址</text>
+      <van-icon name="arrow" class="select-icon" />
+    </view>
+  </view>
+  <view class="field-container">
+    <view class="field-item">
+      <text class="field-label emphasis">服务预算</text>
+      <input class="field-val" placeholder="此处为参考价，实际以最终服务为准" value="{{order.budget}}" data-name="order.budget" bind:input="setInputVal" />
+    </view>
+    <view class="field-item" bind:tap="openDateTime">
+      <text class="field-label emphasis">上门时间</text>
+      <text class="field-val">{{order.visiting_time||'点击选择时间'}}</text>
+      <van-icon name="arrow" class="field-item-right" />
+    </view>
+    <view class="field-item">
+      <text class="field-label">备注信息</text>
+      <input class="field-val" placeholder="填写备注信息" value="{{order.remark}}" data-name="order.remark" bind:input="setInputVal" />
+    </view>
+  </view>
+  <view class="uploader-container">
+    <!-- <view class="uploader-title">图片上传</view> -->
+    <view class="uploader-file">
+      <van-uploader file-list="{{ fileList }}" max-count="8" bind:after-read="afterRead" bind:delete='delPicarr' />
+    </view>
+  </view>
+  <view class="floor-height"></view>
+  <view class="floor">
+    <view class="floor-margin">
+      <view class="floor-price">¥{{price}}</view>
+      <view class="floor-label">诚意金</view>
+    </view>
+    <view class="floor-button" bind:tap="reservation">立即预约</view>
+  </view>
+  <van-popup show="{{ dateTimeShow }}" position='bottom'>
+    <van-datetime-picker type="datetime" value="{{ currentDate }}" bind:cancel='cancelDateTime' bind:confirm='confirmDateTime' />
+  </van-popup>
+  <van-popup show="{{ serviceShow }}" position='bottom'>
+    <van-datetime-picker type="datetime" value="{{ currentDate }}" bind:cancel='cancelDateTime' bind:confirm='confirmDateTime' />
+  </van-popup>
+  <van-toast id="van-toast" />
+</view>

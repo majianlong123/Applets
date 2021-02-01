@@ -1,0 +1,15 @@
+<!--pages/article/article.wxml-->
+<view class="containal" wx:if="{{orderList.length != 0}}">
+  <view class="content" wx:for="{{orderList}}" wx:key="*this" bindtap="articleDeatail" data-id="{{item.id}}" >
+    <image class="img" src="{{item.picurl}}" />
+    <view class="box_content">
+      <view class="tit two-ellipsis">{{item.title}}</view>
+      <view class="time">{{item.descript}}</view>
+      <view class="time">{{item.create_time}}</view>
+    </view>
+    <image class="icon" src="/static/component/right.png" />
+  </view>
+</view>
+<view wx:else style="margin-top:150rpx;">
+  <no-list  title="暂无内容" class="no-list" size="200"></no-list>
+</view>

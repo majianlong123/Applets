@@ -1,0 +1,18 @@
+<view class="find-container">
+  <view>
+    <view class="find-item" wx:for="{{article}}" wx:key="*this" data-id="{{item.id}}">
+      <view wx:if="{{article.length != 0}}">
+        <view class="content" wx:for="{{article}}" wx:key="*this" bindtap="toDetail" data-id="{{item.id}}">
+          <view class="box_content">
+            <view class="tit two-ellipsis">{{item.amount}}</view>
+            <view class="time">{{item.create_time}}</view>
+            <view class="time">备注: {{item.remark}}</view>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <no-list title="暂无分类" class="no-list" style="margin-top:150rpx;"></no-list>
+      </view>
+    </view>
+  </view>
+</view>

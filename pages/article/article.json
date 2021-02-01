@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "no-list": "/components/noList/noList"
+  },
+  "navigationBarTitleText": "平台公告"
+}

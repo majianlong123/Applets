@@ -1,0 +1,11 @@
+<view>
+  <view class="footer">
+    <van-button wx:if="{{nameType==0}}" open-type="getUserInfo" custom-class="button" color='#4e51de' bindtap="getUserInfo" round>
+      立即登录
+    </van-button>
+    <van-button wx:if="{{phoneType==0&&nameType==1}}" open-type="getPhoneNumber" custom-class="button" color='#4e51de' bindtap="getPhoneNumber" round>
+      绑定手机号
+    </van-button>
+    <van-button custom-class="button" color='#4e51de' plain round type="primary">暂不绑定</van-button>
+  </view>
+</view>

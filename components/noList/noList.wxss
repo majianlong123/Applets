@@ -1,0 +1,12 @@
+.container {
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.container image {
+  width: 50%;
+  height: 200rpx;
+  margin-bottom: 10rpx;
+}

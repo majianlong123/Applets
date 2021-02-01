@@ -1,0 +1,31 @@
+<view>
+  <van-popup show="{{show}}" position="bottom" bind:close="isShow">
+    <view class="wrapper">
+      <view class="head">确认付款</view>
+      <view class="money">
+        ￥
+        <text>{{orderfee}}</text>
+      </view>
+
+      <van-radio-group value="{{radioVal}}" bind:change="onRadio">
+        <van-cell-group>
+          <van-cell title="微信支付" clickable data-name="WX">
+            <van-radio slot="right-icon" name="WX" checked-color="#0ccd79" />
+          </van-cell>
+          <van-cell
+            title="余额支付"
+            clickable
+            data-name="AMT"
+            wx:if="{{user.is_store==1||user.is_team==1}}"
+          >
+            <van-radio slot="right-icon" name="AMT" checked-color="#0ccd79" />
+          </van-cell>
+        </van-cell-group>
+      </van-radio-group>
+
+      <view class="button">
+        <view bind:tap="pay">立即支付</view>
+      </view>
+    </view>
+  </van-popup>
+</view>
